@@ -7,6 +7,14 @@ This is that Chrome extension.
 
 ---
 
+![Medium: unreadable](before.png)
+_Medium: unreadable_
+
+![Medium Made Readable Again](after.png)
+_Medium Made Readable Again_
+
+---
+
 **Contributing**
 
 Want to improve something? Your insight is welcome here! Send a pull request!
