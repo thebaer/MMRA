@@ -5,7 +5,7 @@ I've gotten a little tired of showing up to a Medium-powered site on a non-mediu
 
 This is that Chrome extension. [Install it here](https://chrome.google.com/webstore/detail/kljjfejkagofbgklifblndjelgabcmig).
 
----
+### Preview
 
 _Unreadable Medium_
 ![Medium: unreadable](before.png)
@@ -13,16 +13,14 @@ _Unreadable Medium_
 _Medium Made Readable Again_
 ![Medium Made Readable Again](after.png)
 
----
-
-**Contributing**
+### Contributing
 
 Want to improve something? Your insight is welcome here! Send a pull request!
 
-**License**
+### License
 
 MIT
 
-**Credits**
+### Credits
 
 I'm Matt Baer, and I'm tired of annoying, user-hostile software. So I built a publishing space called [Write.as](https://write.as) that doesn't beg you to sign up, [lets you read](https://read.write.as), and leaves out the comments, claps, and [dickbars](https://daringfireball.net/2017/06/medium_dickbars). It's great if you just want to be left alone to get your thoughts out. And if you get lonely, you can always publish straight to Medium.
