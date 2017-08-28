@@ -5,6 +5,12 @@
   "description": "Neutralizes annoying parts of the Medium reading experience so it's more enjoyable to read things.",
   "version": "1.0",
 
+  "icons": {
+    "128": "icon.png" 
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
   "permissions": [
     "https://*/*"
   ],
