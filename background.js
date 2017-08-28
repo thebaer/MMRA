@@ -1,0 +1,23 @@
+//
+// Make Medium Readable Again
+//
+
+var makeReadable = function() {
+	// Un-position:fixed the top nav bar
+	var topNav = document.querySelector('.metabar.u-fixed');
+	if (topNav != null) {
+		topNav.classList.remove('u-fixed');
+	}
+	// Remove the footer
+	var getUpdatesBar = document.querySelector('.js-stickyFooter');
+	if (getUpdatesBar != null) {
+		getUpdatesBar.style.display = 'none';
+	}
+};
+
+// Only run this on Medium sites. 
+// Ensure that by checking for <meta property="al:ios:app_name" content="Medium"> in the document <head />
+var metaCheck = document.head.querySelector('meta[property="al:ios:app_name"]');
+if (metaCheck != null && metaCheck.content == "Medium") {
+	makeReadable();
+}

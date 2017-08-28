@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Make Medium Readable Again",
+  "description": "Neutralizes annoying parts of the Medium reading experience so it's more enjoyable to read things.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["background.js"]
+    }
+  ]
+}
