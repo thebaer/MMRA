@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Make Medium Readable Again Settings</title>
+		<style>
+		body: { padding: 10px; }
+		label {
+			display: block;
+			margin: 1em 0;
+		}
+		#status {
+			font-size: 1.1em;
+		}
+		</style>
+	</head>
+	<body>
+
+		<h2>Personal Preferences</h2>
+
+		<label>
+			<input type="checkbox" id="dickbar"> Hide sharing dickbar
+		</label>
+
+		<hr />
+
+		<h2>Defaults</h2>
+
+		<label>
+			<input type="checkbox" checked="checked" disabled="disabled"> Un-stick top navigation bar
+		</label>
+
+		<label>
+			<input type="checkbox" checked="checked" disabled="disabled"> Hide bottom <em>Get Updates</em> bar
+		</label>
+
+		<hr />
+
+		<p id="status"></p>
+
+		<button id="save">Save</button>
+
+		<script src="options.js"></script>
+
+	</body>
+</html>

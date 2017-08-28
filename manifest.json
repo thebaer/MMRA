@@ -5,6 +5,10 @@
   "description": "Neutralizes annoying parts of the Medium reading experience so it's more enjoyable to read things.",
   "version": "1.0",
 
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
   "icons": {
     "128": "icon.png" 
   },
@@ -12,7 +16,7 @@
     "default_icon": "icon.png"
   },
   "permissions": [
-    "https://*/*"
+    "storage", "https://*/*"
   ],
   "content_scripts": [
     {
