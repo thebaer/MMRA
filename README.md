@@ -7,11 +7,11 @@ This is that Chrome extension.
 
 ---
 
+_Unreadable Medium_
 ![Medium: unreadable](before.png)
-_Medium: unreadable_
 
-![Medium Made Readable Again](after.png)
 _Medium Made Readable Again_
+![Medium Made Readable Again](after.png)
 
 ---
 
