@@ -5,6 +5,12 @@ I've gotten a little tired of showing up to a Medium-powered site on a non-mediu
 
 This is that Chrome extension. [Install it here](https://chrome.google.com/webstore/detail/kljjfejkagofbgklifblndjelgabcmig).
 
+### Improves readability by
+
+* Keeping the top navigation bar from sticking around
+* Hiding the bottom "Get Updates" bar completely
+* (Optionally) hiding the clap / share bar
+
 ### Preview
 
 _Unreadable Medium_
