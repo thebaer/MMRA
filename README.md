@@ -14,10 +14,10 @@ This is that Chrome extension. [Install it here](https://chrome.google.com/webst
 ### Preview
 
 _Unreadable Medium_
-![Medium: unreadable](before.png)
+<kbd>![Medium: unreadable](before.png)</kbd>
 
 _Medium Made Readable Again_
-![Medium Made Readable Again](after.png)
+<kbd>![Medium Made Readable Again](after.png)</kbd>
 
 ### Contributing
 
