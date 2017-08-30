@@ -20,6 +20,12 @@ var hideDickbar = function() {
 	document.querySelector('footer > .container:first-child').style.display = 'none';
 };
 
+var observer = new MutationObserver(function(mutations){
+	mutations.forEach(makeReadable);	
+});
+
+var config = {attributes: true};
+
 // Only run this on Medium sites. 
 // Ensure that by checking for <meta property="al:ios:app_name" content="Medium"> in the document <head />
 var metaCheck = document.head.querySelector('meta[property="al:ios:app_name"]');
@@ -31,4 +37,6 @@ if (metaCheck != null && metaCheck.content == "Medium") {
 			hideDickbar();
 		}
 	});
+
+	observer.observe(document.querySelector('body'), target);
 }
