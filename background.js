@@ -16,8 +16,26 @@ var makeReadable = function() {
 };
 
 var hideDickbar = function() {
-	document.querySelector('.js-postShareWidget').style.display = 'none';
-	document.querySelector('footer > .container:first-child').style.display = 'none';
+	var dickbar = document.querySelector('.js-postShareWidget');
+	if (dickbar != null) {
+		dickbar.style.display = 'none';
+	}
+	var footerDickbar = document.querySelector('footer > .container:first-child');
+	if (footerDickbar != null) {
+		footerDickbar.style.display = 'none';
+	}
+};
+
+var disableLazyLoading = function() {
+	var hiddenMedia = document.querySelectorAll('.js-progressiveMedia-inner');
+	if (hiddenMedia == null) {
+		return;
+	}
+	for (var i=0; i<hiddenMedia.length; i++) {
+		var template = document.createElement('template');
+		template.innerHTML = hiddenMedia[i].textContent;
+		hiddenMedia[i].parentNode.appendChild(template.content.firstChild);
+	}
 };
 
 var observer = new MutationObserver(function(mutations){
@@ -35,6 +53,9 @@ if (metaCheck != null && metaCheck.content == "Medium") {
 	chrome.storage.sync.get(null, function(items) {
 		if (items.hideDickbar) {
 			hideDickbar();
+		}
+		if (items.disableLazyImages) {
+			disableLazyLoading();
 		}
 	});
 

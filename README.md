@@ -10,6 +10,7 @@ This is that Chrome extension. [Install it here](https://chrome.google.com/webst
 * Keeping the top navigation bar from sticking around
 * Hiding the bottom "Get Updates" bar completely
 * (Optionally) hiding the clap / share bar
+* (Optionally) loading all post images up front, instead of lazy loading as you scroll
 
 ### Preview
 
