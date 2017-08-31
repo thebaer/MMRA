@@ -59,5 +59,5 @@ if (metaCheck != null && metaCheck.content == "Medium") {
 		}
 	});
 
-	observer.observe(document.querySelector('body'), target);
+	observer.observe(document.querySelector('body'), config);
 }
