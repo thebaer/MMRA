@@ -3,7 +3,7 @@
 
   "name": "Make Medium Readable Again",
   "description": "Neutralizes annoying parts of the Medium reading experience so it's more enjoyable to read things.",
-  "version": "1.1",
+  "version": "1.2",
 
   "options_ui": {
     "page": "options.html",
