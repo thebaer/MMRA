@@ -2,9 +2,11 @@
 function save_options() {
   var hideDickbar = document.getElementById('dickbar').checked;
   var disableLazyImages = document.getElementById('images').checked;
+  var makeViewable = document.getElementById('ridiculousHeader').checked;
   chrome.storage.sync.set({
     hideDickbar: hideDickbar,
-    disableLazyImages: disableLazyImages
+    disableLazyImages: disableLazyImages,
+    makeViewable: makeViewable
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -24,6 +26,7 @@ function restore_options() {
   }, function(items) {
     document.getElementById('dickbar').checked = items.hideDickbar;
     document.getElementById('images').checked = items.disableLazyImages;
+    document.getElementById('makeViewable').checked = items.makeViewable;
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);

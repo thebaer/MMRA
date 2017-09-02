@@ -38,6 +38,14 @@ var disableLazyLoading = function() {
 	}
 };
 
+var makeViewable = function() {
+	var ridiculousHeaderImage = document.querySelector('figure.graf--layoutFillWidth');
+	if (ridiculousHeaderImage != null) {
+		ridiculousHeaderImage.style.maxWidth = '700px';
+		ridiculousHeaderImage.style.margin = '0 auto';
+	}
+}
+
 var observer = new MutationObserver(function(mutations){
 	mutations.forEach(makeReadable);	
 });
@@ -56,6 +64,10 @@ if (metaCheck != null && metaCheck.content == "Medium") {
 		}
 		if (items.disableLazyImages) {
 			disableLazyLoading();
+		}
+
+		if (items.makeViewable) {
+			makeViewable();
 		}
 	});
 
