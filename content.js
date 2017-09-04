@@ -38,7 +38,7 @@ var disableLazyLoading = function() {
 	}
 };
 
-var makeViewable = function() {
+var shrinkHeaderImages = function() {
 	var ridiculousHeaderImage = document.querySelector('figure.graf--layoutFillWidth');
 	if (ridiculousHeaderImage != null) {
 		ridiculousHeaderImage.style.maxWidth = '700px';
@@ -57,6 +57,7 @@ var config = {attributes: true};
 var metaCheck = document.head.querySelector('meta[property="al:ios:app_name"]');
 if (metaCheck != null && metaCheck.content == "Medium") {
 	makeReadable();
+	shrinkHeaderImages();
 
 	chrome.storage.sync.get(null, function(items) {
 		if (items.hideDickbar) {
@@ -64,10 +65,6 @@ if (metaCheck != null && metaCheck.content == "Medium") {
 		}
 		if (items.disableLazyImages) {
 			disableLazyLoading();
-		}
-
-		if (items.makeViewable) {
-			makeViewable();
 		}
 	});
 
