@@ -47,7 +47,10 @@ var shrinkHeaderImages = function() {
 }
 
 var observer = new MutationObserver(function(mutations){
-	mutations.forEach(makeReadable);	
+	mutations.forEach(function(){
+		makeReadable();
+		shrinkHeaderImages();
+	});	
 });
 
 var config = {attributes: true};
