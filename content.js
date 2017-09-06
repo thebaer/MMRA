@@ -38,8 +38,19 @@ var disableLazyLoading = function() {
 	}
 };
 
+var shrinkHeaderImages = function() {
+	var ridiculousHeaderImage = document.querySelector('figure.graf--layoutFillWidth');
+	if (ridiculousHeaderImage != null) {
+		ridiculousHeaderImage.style.maxWidth = '700px';
+		ridiculousHeaderImage.style.margin = '0 auto';
+	}
+}
+
 var observer = new MutationObserver(function(mutations){
-	mutations.forEach(makeReadable);	
+	mutations.forEach(function(){
+		makeReadable();
+		shrinkHeaderImages();
+	});	
 });
 
 var config = {attributes: true};
@@ -49,6 +60,7 @@ var config = {attributes: true};
 var metaCheck = document.head.querySelector('meta[property="al:ios:app_name"]');
 if (metaCheck != null && metaCheck.content == "Medium") {
 	makeReadable();
+	shrinkHeaderImages();
 
 	chrome.storage.sync.get(null, function(items) {
 		if (items.hideDickbar) {
