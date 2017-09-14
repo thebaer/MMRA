@@ -7,7 +7,7 @@
 
   "applications": {
     "gecko": {
-      "id": "mmra@matt.baer.works",
+      "id": "{28d1ed97-5ff6-432b-a26d-61896fe2cbed}",
       "strict_min_version": "42.0"
     }
   },
