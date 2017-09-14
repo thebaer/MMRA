@@ -27,14 +27,22 @@ var hideDickbar = function() {
 };
 
 var disableLazyLoading = function() {
+	// Get all <noscript> tags accompanying dynamically-loading <img>s
 	var hiddenMedia = document.querySelectorAll('.js-progressiveMedia-inner');
 	if (hiddenMedia == null) {
 		return;
 	}
 	for (var i=0; i<hiddenMedia.length; i++) {
-		var template = document.createElement('template');
-		template.innerHTML = hiddenMedia[i].textContent;
-		hiddenMedia[i].parentNode.appendChild(template.content.firstChild);
+		// Create new <img> element from the one in <noscript> and add it in.
+		// This is certainly a roundabout way of doing things, but I didn't want to
+		// spend more time reverse-engineering Medium's lazy-loading code.
+		var img = document.createElement('img');
+		var srcMatch = hiddenMedia[i].textContent.match(/src="(https:\/\/[^"]+)"/);
+		if (srcMatch != null) {
+			img.src = srcMatch[1];
+			img.className = hiddenMedia[i].textContent.match(/class="([^"]+)"/)[1];
+			hiddenMedia[i].parentNode.appendChild(img);
+		}
 	}
 };
 
