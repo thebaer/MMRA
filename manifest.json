@@ -5,6 +5,12 @@
   "description": "Neutralizes annoying parts of the Medium reading experience so it's more enjoyable to read things.",
   "version": "1.2",
 
+  "applications": {
+    "gecko": {
+      "id": "mmra@matt.baer.works",
+      "strict_min_version": "42.0"
+    }
+  },
   "options_ui": {
     "page": "options.html",
     "chrome_style": true
