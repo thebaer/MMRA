@@ -28,7 +28,7 @@ var hideDickbar = function() {
 
 var disableLazyLoading = function() {
 	// Get all <noscript> tags accompanying dynamically-loading <img>s
-	var hiddenMedia = document.querySelectorAll('.js-progressiveMedia-inner');
+	var hiddenMedia = document.querySelectorAll('noscript.js-progressiveMedia-inner');
 	if (hiddenMedia == null) {
 		return;
 	}
