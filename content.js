@@ -13,6 +13,11 @@ var makeReadable = function() {
 	if (getUpdatesBar) {
 		getUpdatesBar.style.display = 'none';
 	}
+	// Hide "open in app" footer button (on mobile)
+	var openInAppBtn = document.querySelector('.js-openInAppButton');
+	if (openInAppBtn) {
+		openInAppBtn.style.display = 'none';
+	}
 };
 
 var hideDickbar = function() {
