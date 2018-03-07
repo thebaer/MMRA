@@ -58,24 +58,21 @@ var observer = new MutationObserver(function(mutations){
 	mutations.forEach(function(){
 		makeReadable();
 		shrinkHeaderImages();
-	});	
+	});
 });
 
 var config = {attributes: true};
 
-// Only run this on Medium sites. 
-if (document.querySelector('head meta[property="al:ios:app_name"][content="medium"]')) {
-	makeReadable();
-	shrinkHeaderImages();
+makeReadable();
+shrinkHeaderImages();
 
-	chrome.storage.sync.get(null, function(items) {
-		if (items.hideDickbar) {
-			hideDickbar();
-		}
-		if (items.disableLazyImages) {
-			disableLazyLoading();
-		}
-	});
+chrome.storage.sync.get(null, function(items) {
+	if (items.hideDickbar) {
+		hideDickbar();
+	}
+	if (items.disableLazyImages) {
+		disableLazyLoading();
+	}
+});
 
-	observer.observe(document.body, config);
-}
+observer.observe(document.body, config);
