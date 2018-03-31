@@ -63,7 +63,8 @@ var observer = new MutationObserver(function(mutations){
 
 var config = {attributes: true};
 
-// Only run this on Medium sites. 
+// This extension runs on all domains so it can Make Medium Readable Again even for publications on custom domains.
+// Here we make sure the code only runs on Medium sites.
 if (document.querySelector('head meta[property="al:ios:app_name"][content="medium" i]')) {
 	makeReadable();
 	shrinkHeaderImages();
