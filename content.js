@@ -64,7 +64,7 @@ var observer = new MutationObserver(function(mutations){
 var config = {attributes: true};
 
 // Only run this on Medium sites. 
-if (document.querySelector('head meta[property="al:ios:app_name"][content="medium"]')) {
+if (document.querySelector('head meta[property="al:ios:app_name"][content="medium" i]')) {
 	makeReadable();
 	shrinkHeaderImages();
 
