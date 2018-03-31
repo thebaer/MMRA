@@ -3,7 +3,7 @@
 
   "name": "Make Medium Readable Again",
   "description": "Neutralizes annoying parts of the Medium reading experience and lets you read again.",
-  "version": "1.3",
+  "version": "1.3.1",
 
   "applications": {
     "gecko": {
