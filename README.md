@@ -16,6 +16,7 @@ Make Medium Readable Again is a [Chrome extension](https://chrome.google.com/web
 * Shrinking massive header images
 * (Optionally) hiding the clap / share bar
 * (Optionally) loading all post images up front, instead of lazy loading as you scroll
+* (Optionally) disabling the popup menu that appears when selecting text
 
 ### Preview
 
