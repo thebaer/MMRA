@@ -6,7 +6,7 @@ function save_options() {
   chrome.storage.sync.set({
     hideDickbar: hideDickbar,
     disableLazyImages: disableLazyImages,
-	hideHighlightMenu: hideHighlightMenu
+    hideHighlightMenu: hideHighlightMenu
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -23,7 +23,7 @@ function restore_options() {
   chrome.storage.sync.get({
     hideDickbar: false,
     disableLazyImages: false,
-	hideHighlightMenu: false
+    hideHighlightMenu: false
   }, function(items) {
     document.getElementById('dickbar').checked = items.hideDickbar;
     document.getElementById('images').checked = items.disableLazyImages;
