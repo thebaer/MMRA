@@ -15,6 +15,13 @@ var makeReadable = function() {
 	}
 };
 
+var hideHighlightMenu = function() {
+	var bar = document.querySelector('.highlightMenu');
+	if (bar) {
+		bar.style.display = 'none';
+	}
+};
+
 var hideDickbar = function() {
 	var dickbar = document.querySelector('.js-postShareWidget');
 	if (dickbar) {
@@ -75,6 +82,9 @@ if (document.querySelector('head meta[property="al:ios:app_name"][content="mediu
 		}
 		if (items.disableLazyImages) {
 			disableLazyLoading();
+		}
+		if (items.hideHighlightMenu) {
+			hideHighlightMenu();
 		}
 	});
 
