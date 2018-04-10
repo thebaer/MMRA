@@ -8,13 +8,8 @@ var makeReadable = function() {
 	if (topNav) {
 		topNav.classList.remove('u-fixed');
 	}
-	// Remove the footer
-	var getUpdatesBar = document.querySelector('.js-stickyFooter');
-	if (getUpdatesBar) {
-		getUpdatesBar.style.display = 'none';
-	}
 
-	// Load remaining styles
+	// Inject remaining styles
 	// This check makes sure the extension works on Chrome and Firefox.
 	if (typeof browser === 'undefined') {
 		browser = chrome;
