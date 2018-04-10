@@ -2,6 +2,6 @@
  * medium.css
  * Contains default styles to inject into Medium publications.
  */
-.postMeterBar {
+.postMeterBar, .openInAppButton {
 	display: none;
 }
