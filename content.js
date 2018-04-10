@@ -13,6 +13,13 @@ var makeReadable = function() {
 	if (getUpdatesBar) {
 		getUpdatesBar.style.display = 'none';
 	}
+
+	// Load remaining styles
+	// This check makes sure the extension works on Chrome and Firefox.
+	if (typeof browser === 'undefined') {
+		browser = chrome;
+	}
+	document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="' + browser.runtime.getURL("medium.css") + '">');
 };
 
 var hideHighlightMenu = function() {
