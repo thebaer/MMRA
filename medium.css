@@ -4,6 +4,7 @@
  */
 .postMeterBar,
 .openInAppButton,
-.js-stickyFooter {
+.js-stickyFooter,
+.js-upgradeMembershipAction {
 	display: none;
 }
