@@ -1,0 +1,7 @@
+/**
+ * medium.css
+ * Contains default styles to inject into Medium publications.
+ */
+.postMeterBar {
+	display: none;
+}

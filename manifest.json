@@ -29,5 +29,8 @@
       "matches": ["https://*/*"],
       "js": ["content.js"]
     }
+  ],
+  "web_accessible_resources": [
+	  "medium.css"
   ]
 }
