@@ -5,6 +5,8 @@
 .postMeterBar,
 .openInAppButton,
 .js-stickyFooter,
-.js-upgradeMembershipAction {
+.js-upgradeMembershipAction,
+.butterBar--privacy,
+.overlay--lighter {
 	display: none;
 }
