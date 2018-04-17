@@ -7,6 +7,11 @@
 .js-stickyFooter,
 .js-upgradeMembershipAction,
 .butterBar--privacy,
+.overlay,
 .overlay--lighter {
 	display: none;
+}
+
+.u-overflowHidden {
+	overflow: scroll !important;
 }
