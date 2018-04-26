@@ -12,6 +12,7 @@
 	display: none;
 }
 
-.u-overflowHidden {
-	overflow: scroll !important;
+/* Makes the page scrollable after hiding "Pardon the interruption" popup */
+html.u-overflowHidden {
+	overflow-y: scroll !important;
 }
