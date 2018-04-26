@@ -9,6 +9,19 @@ var makeReadable = function() {
 		topNav.classList.remove('u-fixed');
 	}
 
+	// Remove the "Pardon the interruption" popup.
+	// We do this with JS because the .overlay.overlay--lighter element is used
+	// for interactions we consent to, like the sign up / log in dialogs, so we
+	// don't want to obliterate them too.
+	// FIXME: prevent this from breaking signup/login dialogs when the popup
+	//   is removed (it works after changing pages).
+	var headings = document.evaluate("//h1[contains(., 'Pardon the interruption.')]", document, null, XPathResult.ANY_TYPE, null );
+	var thisHeading = headings.iterateNext();
+	if (thisHeading != null) {
+		var $overlay = thisHeading.parentNode.parentNode.parentNode.parentNode;
+		$overlay.parentNode.removeChild($overlay);
+	}
+
 	// Inject remaining styles
 	// This check makes sure the extension works on Chrome and Firefox.
 	if (typeof browser === 'undefined') {

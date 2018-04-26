@@ -6,9 +6,7 @@
 .openInAppButton,
 .js-stickyFooter,
 .js-upgradeMembershipAction,
-.butterBar--privacy,
-.overlay,
-.overlay--lighter {
+.butterBar--privacy {
 	display: none;
 }
 
