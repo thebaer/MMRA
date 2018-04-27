@@ -39,3 +39,9 @@ MIT
 ### Credits
 
 I'm Matt Baer, and I'm tired of annoying, user-hostile software. Inspired by this and a time when Medium was more readable, I built a writing platform called [Write.as](https://write.as) that [works great if you never sign up](https://write.as/new), [lets you read](https://read.write.as), and leaves out the comments, claps, and [dickbars](https://daringfireball.net/2017/06/medium_dickbars). It's perfect for when you just need to get your thoughts out — and if you want to share, you can always cross-post to Medium.
+
+### Related
+
+Other extensions to make the internet less annoying:
+
+* [Make Facebook Browsable](https://github.com/thebaer/MFbB)
