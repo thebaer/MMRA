@@ -5,6 +5,12 @@
 .postMeterBar,
 .openInAppButton,
 .js-stickyFooter,
-.js-upgradeMembershipAction {
+.js-upgradeMembershipAction,
+.butterBar--privacy {
 	display: none;
+}
+
+/* Makes the page scrollable after hiding "Pardon the interruption" popup */
+html.u-overflowHidden {
+	overflow-y: scroll !important;
 }
