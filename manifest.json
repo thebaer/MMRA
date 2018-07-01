@@ -19,7 +19,8 @@
     "128": "icon.png" 
   },
   "permissions": [
-    "storage", "https://*/*"
+    "storage",
+    "https://*/*"
   ],
   "content_scripts": [
     {
@@ -28,6 +29,6 @@
     }
   ],
   "web_accessible_resources": [
-	  "medium.css"
+    "medium.css"
   ]
 }
