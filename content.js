@@ -76,14 +76,6 @@ var shrinkHeaderImages = function() {
 	}
 }
 
-var observer = new MutationObserver(function(mutations){
-	mutations.forEach(function(){
-		makeReadable();
-		shrinkHeaderImages();
-	});	
-});
-
-var config = {attributes: true};
 var hidePremiumContent = function() {
 	var icon = "span.svgIcon.svgIcon--star";
 	document.querySelector('.js-homeStream') ? document.querySelector('.js-homeStream').remove() : null;
@@ -98,6 +90,8 @@ var hidePremiumContent = function() {
 if (document.querySelector('head meta[property="al:ios:app_name"][content="medium" i]')) {
 	makeReadable();
 	shrinkHeaderImages();
+	var hidePremiumContentFlag = false;
+	var config = {attributes: true};
 
 	chrome.storage.sync.get(null, function(items) {
 		if (items.hideDickbar) {
@@ -109,6 +103,20 @@ if (document.querySelector('head meta[property="al:ios:app_name"][content="mediu
 		if (items.hideHighlightMenu) {
 			hideHighlightMenu();
 		}
+		if (items.hidePremiumContent) {
+			hidePremiumContentFlag = true;
+			config.childList = true;
+		}
+	});
+
+	var observer = new MutationObserver(function(mutations) {
+		mutations.forEach(function() {
+			makeReadable();
+			shrinkHeaderImages();
+			if (hidePremiumContentFlag) {
+				hidePremiumContent();
+			}
+		});
 	});
 
 	observer.observe(document.body, config);
