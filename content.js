@@ -84,6 +84,14 @@ var observer = new MutationObserver(function(mutations){
 });
 
 var config = {attributes: true};
+var hidePremiumContent = function() {
+	var icon = "span.svgIcon.svgIcon--star";
+	document.querySelector('.js-homeStream') ? document.querySelector('.js-homeStream').remove() : null;
+	document.querySelectorAll(icon).forEach(function(iconElem) {
+		iconElem.closest('div.streamItem') ? iconElem.closest('div.streamItem').remove() : null;
+		iconElem.closest('div.u-borderBox.js-sectionItem') ? iconElem.closest('div.u-borderBox.js-sectionItem').remove() : null;
+	});
+}
 
 // This extension runs on all domains so it can Make Medium Readable Again even for publications on custom domains.
 // Here we make sure the code only runs on Medium sites.
