@@ -7,17 +7,19 @@
 </p>
 <hr />
 
-I've gotten a little tired of showing up to a Medium-powered site on a non-medium.com domain and getting badgered to **Sign Up!** or **Get Updates!** when I'm already a Medium user. It's also annoying to have a vertically-small reading viewport because the top and bottom nav bars don't auto-hide. I know -- _Who owns a 12.1" laptop anymore?_, right? Well... today I decided I couldn't abide that anymore, and made a browser extension to neutralize these user hostilities.
-
-This is that browser extension. Install it [on Chrome](https://chrome.google.com/webstore/detail/kljjfejkagofbgklifblndjelgabcmig) or [on Firefox](https://addons.mozilla.org/addon/make-medium-readable-again/).
+Make Medium Readable Again is a [Chrome extension](https://chrome.google.com/webstore/detail/kljjfejkagofbgklifblndjelgabcmig) and [Firefox add-on](https://addons.mozilla.org/addon/make-medium-readable-again/) that improves a reading experience ruined by user engagement tactics. Medium was actually readable once; this extension aims to help people pay attention to writers' words again instead of Medium's UX.
 
 ### Improves readability by
 
 * Keeping the top navigation bar from sticking around
 * Hiding the bottom "Get Updates" bar completely
 * Shrinking massive header images
+* Hiding "posts meter" bar and Upgrade header button
+* Hiding "Open in App" button on mobile
+* Blocking the "pardon the interruption" popup
 * (Optionally) hiding the clap / share bar
 * (Optionally) loading all post images up front, instead of lazy loading as you scroll
+* (Optionally) disabling the popup menu that appears when selecting text
 
 ### Preview
 
@@ -29,7 +31,7 @@ _Medium Made Readable Again_
 
 ### Contributing
 
-Want to improve something? Your insight is welcome here! Send a pull request!
+Want to improve something? Please do! Send a pull request or file an issue!
 
 ### License
 
@@ -37,4 +39,10 @@ MIT
 
 ### Credits
 
-I'm Matt Baer, and I'm tired of annoying, user-hostile software. So I built a publishing space called [Write.as](https://write.as) that doesn't beg you to sign up, [lets you read](https://read.write.as), and leaves out the comments, claps, and [dickbars](https://daringfireball.net/2017/06/medium_dickbars). It's great if you just want to be left alone to get your thoughts out. And if you get lonely, you can always publish straight to Medium.
+I'm Matt Baer, and I'm tired of annoying, user-hostile software. Inspired by this and a time when Medium was more readable, I built a writing platform called [Write.as](https://write.as) that [works great if you never sign up](https://write.as/new), [lets you read](https://read.write.as), and leaves out the comments, claps, and [dickbars](https://daringfireball.net/2017/06/medium_dickbars). It's perfect for when you just need to get your thoughts out — and if you want to share, you can always cross-post to Medium.
+
+### Related
+
+Other extensions to make the internet less annoying:
+
+* [Make Facebook Browsable](https://github.com/thebaer/MFbB)

@@ -2,9 +2,11 @@
 function save_options() {
   var hideDickbar = document.getElementById('dickbar').checked;
   var disableLazyImages = document.getElementById('images').checked;
+  var hideHighlightMenu = document.getElementById('highlight').checked;
   chrome.storage.sync.set({
     hideDickbar: hideDickbar,
-    disableLazyImages: disableLazyImages
+    disableLazyImages: disableLazyImages,
+    hideHighlightMenu: hideHighlightMenu
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -20,10 +22,12 @@ function save_options() {
 function restore_options() {
   chrome.storage.sync.get({
     hideDickbar: false,
-    disableLazyImages: false
+    disableLazyImages: false,
+    hideHighlightMenu: false
   }, function(items) {
     document.getElementById('dickbar').checked = items.hideDickbar;
     document.getElementById('images').checked = items.disableLazyImages;
+    document.getElementById('highlight').checked = items.hideHighlightMenu;
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
