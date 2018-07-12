@@ -15,7 +15,7 @@ var makeReadable = function() {
 	// don't want to obliterate them too.
 	// FIXME: prevent this from breaking signup/login dialogs when the popup
 	//   is removed (it works after changing pages).
-	var headings = document.evaluate("//h1[contains(., 'Pardon the interruption.')]", document, null, XPathResult.ANY_TYPE, null );
+	var headings = document.evaluate("//h1[contains(., 'Pardon the interruption.')]", document, null, XPathResult.ANY_TYPE, null);
 	var thisHeading = headings.iterateNext();
 	if (thisHeading != null) {
 		var $overlay = thisHeading.parentNode.parentNode.parentNode.parentNode;
@@ -54,7 +54,7 @@ var disableLazyLoading = function() {
 	if (hiddenMedia.length === 0) {
 		return;
 	}
-	for (var i=0; i<hiddenMedia.length; i++) {
+	for (var i = 0; i < hiddenMedia.length; i++) {
 		// Create new <img> element from the one in <noscript> and add it in.
 		// This is certainly a roundabout way of doing things, but I didn't want to
 		// spend more time reverse-engineering Medium's lazy-loading code.
@@ -80,6 +80,7 @@ var hidePremiumContent = function() {
 	var icon = "span.svgIcon.svgIcon--star";
 	document.querySelector('.js-homeStream') ? document.querySelector('.js-homeStream').remove() : null;
 	document.querySelectorAll(icon).forEach(function(iconElem) {
+		iconElem.closest('li.u-flex') ? iconElem.closest('li.u-flex').remove() : null;
 		iconElem.closest('div.streamItem') ? iconElem.closest('div.streamItem').remove() : null;
 		iconElem.closest('div.u-borderBox.js-sectionItem') ? iconElem.closest('div.u-borderBox.js-sectionItem').remove() : null;
 	});
