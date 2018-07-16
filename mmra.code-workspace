@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"html.format.extraLiners": "null",
+		"editor.tabSize": 2,
+		"editor.insertSpaces": false
+	}
+}
