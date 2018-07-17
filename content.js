@@ -30,6 +30,27 @@ var makeReadable = function() {
 	document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="' + browser.runtime.getURL("medium.css") + '">');
 };
 
+var hideGifs = function() {
+
+	// For all progressive media components, if it contains a giphy or gif thumbnail we'll want to hide it
+	var progressiveMediaElements = document.querySelectorAll('.progressiveMedia');
+
+	progressiveMediaElements.forEach(function(mediaElement) {
+		var childImages = mediaElement.querySelectorAll('img');
+		childImages.forEach(function(image) {
+			if (image.src && (image.src.indexOf('gif') !== -1 || image.src.indexOf('giphy') !== -1)) {
+
+				// Hide the media element
+				mediaElement.style.display = 'none';
+				mediaElement.style.height = 0;
+
+				// The media element's parent is a "aspectRatioPlaceholder".  We want to make its height 0 as well
+				mediaElement.parentElement.style.height = 0;
+			}
+		});
+	});
+}
+
 var hideHighlightMenu = function() {
 	var bar = document.querySelector('.highlightMenu');
 	if (bar) {
@@ -80,7 +101,7 @@ var observer = new MutationObserver(function(mutations){
 	mutations.forEach(function(){
 		makeReadable();
 		shrinkHeaderImages();
-	});	
+	});
 });
 
 var config = {attributes: true};
@@ -100,6 +121,9 @@ if (document.querySelector('head meta[property="al:ios:app_name"][content="mediu
 		}
 		if (items.hideHighlightMenu) {
 			hideHighlightMenu();
+		}
+		if (items.hideGifs) {
+			hideGifs();
 		}
 	});
 
