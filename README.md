@@ -7,7 +7,7 @@
 </p>
 <hr />
 
-Make Medium Readable Again is a [Chrome extension](https://chrome.google.com/webstore/detail/kljjfejkagofbgklifblndjelgabcmig) and [Firefox add-on](https://addons.mozilla.org/addon/make-medium-readable-again/) that improves a reading experience ruined by user engagement tactics. Medium was actually readable once; this extension aims to help people pay attention to writers' words again instead of Medium's UX.
+Make Medium Readable Again is a [Chrome extension](https://chrome.google.com/webstore/detail/kljjfejkagofbgklifblndjelgabcmig), [Firefox add-on](https://addons.mozilla.org/addon/make-medium-readable-again/) and [Safari extension](https://safari-extensions.apple.com/details/?id=com.abunchtell.mmra-TPPAB4YBA6) that improves a reading experience ruined by user engagement tactics. Medium was actually readable once; this extension aims to help people pay attention to writers' words again instead of Medium's UX.
 
 ### Improves readability by
 
