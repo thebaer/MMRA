@@ -87,9 +87,9 @@ var config = {attributes: true};
 
 // This extension runs on all domains so it can Make Medium Readable Again even for publications on custom domains.
 // Here we make sure the code only runs on Medium sites.
+if (document.querySelector('head[prefix*="medium-com:"]')) {
 	makeReadable();
 	shrinkHeaderImages();
-if (document.querySelector('head[prefix*="medium-com:"]')) {
 
 	chrome.storage.sync.get(null, function(items) {
 		if (items.hideDickbar) {
