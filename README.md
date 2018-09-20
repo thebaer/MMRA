@@ -4,6 +4,7 @@
 <p align="center">
 	<a href="https://chrome.google.com/webstore/detail/kljjfejkagofbgklifblndjelgabcmig"><img src="https://baer.works/image/CWS.png" alt="Available in the Chrome Web Store" /></a>
 	<a href="https://addons.mozilla.org/addon/make-medium-readable-again/"><img src="https://baer.works/image/AMO.png" alt="Get the Firefox Add-on" /></a>
+	<a href="https://safari-extensions.apple.com/details/?id=com.abunchtell.mmra-TPPAB4YBA6"><img src="https://baer.works/image/safari.png" alt="Get the Safari Extension" /></a>
 </p>
 <hr />
 
