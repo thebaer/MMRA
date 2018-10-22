@@ -34,10 +34,7 @@ var makeReadable = function() {
 };
 
 var hideHighlightMenu = function() {
-	var bar = document.querySelector('.highlightMenu');
-	if (bar) {
-		bar.style.display = 'none';
-	}
+	document.head.insertAdjacentHTML('beforeend', '<style type="text/css">.highlightMenu { display: none; }</style>');
 };
 
 var hideDickbar = function() {
