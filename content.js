@@ -27,7 +27,10 @@ var makeReadable = function() {
 	if (typeof browser === 'undefined') {
 		browser = chrome;
 	}
-	document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="' + browser.runtime.getURL("medium.css") + '">');
+	var mediumCSS = browser.runtime.getURL("medium.css");
+	if (document.querySelector('head link[href="' + mediumCSS + '"]') == null) {
+		document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="' + mediumCSS + '">');
+	}
 };
 
 var hideHighlightMenu = function() {
