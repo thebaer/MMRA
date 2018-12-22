@@ -27,14 +27,14 @@ var makeReadable = function() {
 	if (typeof browser === 'undefined') {
 		browser = chrome;
 	}
-	var mediumCSS = browser.runtime.getURL("medium.css");
-	if (document.querySelector('head link[href="' + mediumCSS + '"]') == null) {
-		document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="' + mediumCSS + '">');
-	}
+	document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" type="text/css" href="' + browser.runtime.getURL("medium.css") + '">');
 };
 
 var hideHighlightMenu = function() {
-	document.head.insertAdjacentHTML('beforeend', '<style type="text/css">.highlightMenu { display: none; }</style>');
+	var bar = document.querySelector('.highlightMenu');
+	if (bar) {
+		bar.style.display = 'none';
+	}
 };
 
 var hideDickbar = function() {
