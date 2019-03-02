@@ -37,6 +37,43 @@ var hideHighlightMenu = function() {
 	document.head.insertAdjacentHTML('beforeend', '<style type="text/css">.highlightMenu { display: none; }</style>');
 };
 
+var isTopHighlightNode = function(node) {
+	return (
+		node.nodeType === Node.ELEMENT_NODE &&
+		node.classList.contains('markup--quote') &&
+		node.classList.contains('is-other')
+	);
+}
+
+var removeHighlight = function(node) {
+	node.classList.remove('markup--quote');
+	var parentNode = node.parentNode;
+	var name = parentNode.getAttribute('name');
+	if (name) {
+		var control = document.querySelector('.js-paragraphControl-' + name);
+		if (control) {
+			control.remove();
+		}
+	}
+}
+
+var hideTopHighlight = function() {
+	var highlightObserver = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			mutation.addedNodes.forEach(function(node) {
+				if (isTopHighlightNode(node)) {
+					removeHighlight(node);
+				}
+			});
+		});
+	});
+
+	highlightObserver.observe(document.body, {
+		childList: true,
+		subtree: true
+	});
+};
+
 var hideDickbar = function() {
 	var dickbar = document.querySelector('.js-postShareWidget');
 	if (dickbar) {
@@ -100,6 +137,9 @@ if (document.querySelector('head meta[property="al:ios:app_name"][content="mediu
 		}
 		if (items.hideHighlightMenu) {
 			hideHighlightMenu();
+		}
+		if (items.hideTopHighlight) {
+			hideTopHighlight();
 		}
 	});
 
