@@ -15,7 +15,7 @@ var makeReadable = function() {
 	// don't want to obliterate them too.
 	// FIXME: prevent this from breaking signup/login dialogs when the popup
 	//   is removed (it works after changing pages).
-	var headings = document.evaluate("//h1[contains(., 'Pardon the interruption.')]", document, null, XPathResult.ANY_TYPE, null );
+	var headings = document.evaluate("//h2[contains(., 'one more story in your member preview this month')]", document, null, XPathResult.ANY_TYPE, null );
 	var thisHeading = headings.iterateNext();
 	if (thisHeading != null) {
 		var $overlay = thisHeading.parentNode.parentNode.parentNode.parentNode;
