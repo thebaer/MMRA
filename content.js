@@ -4,9 +4,9 @@
 
 var makeReadable = function() {
 	// Un-position:fixed the top nav bar
-	var topNav = document.querySelector('.metabar.u-fixed');
+	var topNav = document.querySelector('.branch-journeys-top');
 	if (topNav) {
-		topNav.classList.remove('u-fixed');
+		topNav.parentNode.style.position = 'absolute';
 	}
 
 	// Remove the "Pardon the interruption" popup.
@@ -15,10 +15,10 @@ var makeReadable = function() {
 	// don't want to obliterate them too.
 	// FIXME: prevent this from breaking signup/login dialogs when the popup
 	//   is removed (it works after changing pages).
-	var headings = document.evaluate("//h1[contains(., 'Pardon the interruption.')]", document, null, XPathResult.ANY_TYPE, null );
+	var headings = document.evaluate("//h4[contains(., 'one more story in your member preview this month')]", document, null, XPathResult.ANY_TYPE, null );
 	var thisHeading = headings.iterateNext();
 	if (thisHeading != null) {
-		var $overlay = thisHeading.parentNode.parentNode.parentNode.parentNode;
+		var $overlay = thisHeading.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
 		$overlay.parentNode.removeChild($overlay);
 	}
 
