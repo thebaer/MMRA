@@ -4,9 +4,9 @@
 
 var makeReadable = function() {
 	// Un-position:fixed the top nav bar
-	var topNav = document.querySelector('.metabar.u-fixed');
+	var topNav = document.querySelector('.branch-journeys-top');
 	if (topNav) {
-		topNav.classList.remove('u-fixed');
+		topNav.parentNode.style.position = 'absolute';
 	}
 
 	// Remove the "Pardon the interruption" popup.
