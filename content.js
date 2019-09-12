@@ -4,9 +4,15 @@
 
 var makeReadable = function() {
 	// Un-position:fixed the top nav bar
-	var topNav = document.querySelector('.metabar.u-fixed');
+	var topNav = document.querySelector('nav.m');
 	if (topNav) {
-		topNav.classList.remove('u-fixed');
+		topNav.classList.remove('m');
+	}
+
+	// remove topbar spacing if present
+	var topNavSpacing = document.querySelector('nav + div.da');
+	if (topNavSpacing) {
+		topNavSpacing.remove();
 	}
 
 	// Remove the "Pardon the interruption" popup.
@@ -77,7 +83,7 @@ var observer = new MutationObserver(function(mutations){
 	mutations.forEach(function(){
 		makeReadable();
 		shrinkHeaderImages();
-	});	
+	});
 });
 
 var config = {attributes: true};
