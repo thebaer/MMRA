@@ -35,14 +35,18 @@ var hideHighlightMenu = function() {
 };
 
 var hideDickbar = function() {
-	var dickbar = document.querySelector('.js-postShareWidget');
-	if (dickbar) {
-		dickbar.style.display = 'none';
-	}
-	var footerDickbar = document.querySelector('footer > .container:first-child');
-	if (footerDickbar) {
-		footerDickbar.style.display = 'none';
-	}
+	var observer = new MutationObserver(function (mutationList) {
+		mutationList.forEach(function (mutation) {
+			if (mutation.type === "attributes" && mutation.attributeName === "data-selectable-paragraph") {
+				mutation.target.removeAttribute("data-selectable-paragraph");
+			}
+		});
+	});
+	observer.observe(document.body, {
+		attributeFilter: ["data-selectable-paragraph"],
+		attributeOldValue: false,
+		subtree: true
+	});
 };
 
 var disableLazyLoading = function() {
